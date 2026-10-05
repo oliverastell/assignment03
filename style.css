@@ -1,75 +1,195 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+:root {
+  --main-bg: #FFEEEC;
+  --main-content: #000000;
+
+  --side-bg: #BA4B06;
+  --side-content: #FFEEEC;
+
+  --nav: #420000;
+  --nav-content: #FFEEEC;
+  --nav-content-alt: #DDA380;
+
+  --footer-bg: #420000;
+  --footer-content: #FFEEEC;
+  --footer-content-alt: #DDA380;
+
+  --banner: #BA4B06;
+  --banner-content: #FFEEEC;
+
+  --header: #7E2603;
+  --header-content: #FFEEEC;
+  --header-content-alt: #DDA380;
+}
 
 body {
   margin: 0;
 }
 
-.container {
+
+.fit-height {
+  height: 100%;
+}
+
+.separator {
+  flex-grow: 1;
+}
+
+nav {
+  background: var(--nav);
+  color: var(--nav-content);
+
+  a {
+    color: var(--nav-content);
+    font-weight: bold;
+    text-decoration: underline 2px solid;
+  }
+
+  a:hover {
+    color: var(--nav-content-alt);
+  }
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+
+  #icon, #graphic {
+    height: 50px;
+  }
+}
+
+#banner {
+
+  background: var(--banner);
+  color: var(--banner-content);
+  position: relative;
+  grid-area: banner;
+
+  #banner-text {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+  }
+  
+  #banner-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+header {
+  background: var(--header);
+  color: var(--header-content);
+  grid-area: header;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+
+  #header-image {
+    height: 100%;
+  }
+}
+
+main {
+  background: var(--main-bg);
+  color: var(--main-content);
+  grid-area: main;
+}
+
+aside {
+  background: var(--side-bg);
+  color: var(--side-content);
+  grid-area: aside;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-content);
+  grid-area: footer;
+}
+
+#content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#grid {
   display: grid;
 
-  height: 100vh;
-  width: 100vw;
-}
+  flex-grow: 1;
 
-@media screen and (max-width: 1024px) {
-  .container {
-    grid-template-areas:
-      "nav   "
-      "header"
-      "main  "
-      "aside "
-      "footer";
-    grid-template-columns: 100vw;
-    grid-template-rows: 10vh 30vh 30vh 20vh 10vh;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .container {
-    grid-template-areas:
-      "nav   "
-      "header"
-      "main  "
-      "aside "
-      "footer";
-    grid-template-columns: 100vw;
-    grid-template-rows: 10vh 45vh 25vh 10vh 10vh;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .container {
-    grid-template-areas:
-      "nav    nav   "
+  grid-template-areas:
+      "banner banner"
       "header header"
       "main   aside "
       "footer footer";
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 10vh 45vh 35vh 10vh;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 40vh 20vh 1fr 10vh;
+}
+
+@media screen and (max-width: 1280px) {
+  #grid {
+    grid-template-areas:
+      "banner"
+      "header"
+      "main  "
+      "footer";
+    grid-template-columns: 100vw;
+    grid-template-rows: 30vh 30vh 1fr 10vh;
+  }
+  
+  aside {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+    #header-image {
+      height: 50%;
+    }
+    #header-text {
+      max-height: 50%;
+    }
   }
 }
 
-.container nav {
-  grid-area: nav;
-  background-color: teal;
-}
 
-.container header {
-  grid-area: header;
-  background-color: gray;
-}
+@media screen and (max-width: 1024px) {
+  #grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 15vh 15vh 1fr 10vh;
+  }
 
-.container main {
-  grid-area: main;
-  background-color: navajowhite;
-}
+  header {
+    #header-image {
+      display: none;
+    }
+  }
 
-.container aside {
-  grid-area: aside;
-  background-color: rebeccapurple;
-}
+  /*nav {*/
+  /*  flex-direction: column;*/
+  /*}*/
 
-.container footer {
-  grid-area: footer;
-  background-color: firebrick;
+  /*nav #graphic {*/
+  /*  height: 50%;*/
+  /*}*/
+  
+  /*nav #true-nav {*/
+  /*  height: 50%;*/
+  /*}*/
 }
