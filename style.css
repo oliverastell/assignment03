@@ -5,10 +5,10 @@
   --main-bg: #FFEEEC;
   --main-content: #000000;
 
-  --side-bg: #BA4B06;
+  --side-bg: #DDA380;
   --side-content: #FFEEEC;
 
-  --nav: #420000;
+  --nav-bg: #420000;
   --nav-content: #FFEEEC;
   --nav-content-alt: #DDA380;
 
@@ -28,7 +28,6 @@ body {
   margin: 0;
 }
 
-
 .fit-height {
   height: 100%;
 }
@@ -37,9 +36,17 @@ body {
   flex-grow: 1;
 }
 
+.fire-text {
+  background: url("img/fire.gif");
+  background-size: auto 100%;
+  color: black;
+}
+
 nav {
-  background: var(--nav);
+  background: var(--nav-bg);
   color: var(--nav-content);
+
+  z-index: 100;
 
   a {
     color: var(--nav-content);
@@ -78,6 +85,8 @@ nav {
     position: absolute;
     left: 16px;
     bottom: 16px;
+    font-size: 10vw;
+    margin: 0;
   }
   
   #banner-image {
@@ -95,12 +104,24 @@ header {
   padding: 20px;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  vertical-align: center;
   gap: 20px;
 
   #header-image {
     height: 100%;
+  }
+
+  #header-line {
+    border-color: transparent;
+    border-left: 2px var(--header-content-alt) solid;
+    width: 1px;
+    height: 100%;
+  }
+
+  #header-text {
+    margin: 0;
   }
 }
 
@@ -148,19 +169,22 @@ footer {
       "banner"
       "header"
       "main  "
+      "aside "
       "footer";
     grid-template-columns: 100vw;
-    grid-template-rows: 30vh 30vh 1fr 10vh;
-  }
-  
-  aside {
-    display: none;
+    grid-template-rows: 30vh 30vh 0.5fr 0.5fr 10vh;
   }
 
   header {
     flex-direction: column;
     #header-image {
       height: 50%;
+    }
+    #header-line {
+      border-color: transparent;
+      border-top: 2px var(--header-content-alt) solid;
+      width: 100%;
+      height: 1px;
     }
     #header-text {
       max-height: 50%;
@@ -172,11 +196,14 @@ footer {
 @media screen and (max-width: 1024px) {
   #grid {
     grid-template-columns: 100vw;
-    grid-template-rows: 15vh 15vh 1fr 10vh;
+    grid-template-rows: 15vh 15vh 0.5fr 0.5fr 10vh;
   }
 
   header {
     #header-image {
+      display: none;
+    }
+    #header-line {
       display: none;
     }
   }
@@ -185,7 +212,15 @@ footer {
   /*  flex-direction: column;*/
   /*}*/
 
-  /*nav #graphic {*/
+  /*
+    <nav>
+      <img id="icon" src="img/square.png" alt="placeholder">
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Newsletter</a>
+      <div class="separator"></div>
+      <img id="graphic" src="img/ultrawide.png" alt="placeholder">
+    </nav> #graphic {*/
   /*  height: 50%;*/
   /*}*/
   
