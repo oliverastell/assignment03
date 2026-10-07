@@ -3,74 +3,140 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Mug Root Beer</title>
+  <title>Learn Python</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="content">
     <nav>
-      <img id="icon" src="img/square.png" alt="placeholder">
+      <img id="icon" src="img/question_mark.png" alt="3D question mark">
       <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Newsletter</a>
+      <a href="">Practice</a>
+      <a href="">Guides</a>
       <div class="separator"></div>
-      <img id="graphic" src="img/ultrawide.png" alt="placeholder">
+      <img id="graphic" src="img/python_text.png" alt="Python logo with title">
     </nav>
-    <div id="grid">
+    <div id="page">
 
       <div id="banner">
-        <img id="banner-image" class="fit-height" src="img/banner.png" alt="placeholder">
-        <h1 id="banner-text" class="fire-text">TITLE TITLE</h1>
+        <img id="banner-image" class="fit-height" src="img/python_snake.png" alt="Literal python snake">
+        <h1 id="banner-text">
+          Learn Python
+        </h1>
       </div>
       <header>
-        <img id="header-image" src="img/ultrawide.png" alt="placeholder">
-        <hr id="header-line" class="vl">
-        <p id="header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <img id="header-image" src="img/python_syntax.png" alt="Word cloud of Python syntax features">
+        <hr id="header-line">
+        <p id="header-text">
+          What is Python? Python is a general purpose scripting language used for various things.
+          I'm bored with writing this so here's a Wikipedia excerpt.
+          Here's a Wikipedia excerpt:
+          Python is a high-level, general-purpose programming language that emphasizes code readability, simplicity,
+          and ease-of-writing with the use of significant indentation,
+          an extensive ("batteries-included") standard library, and garbage collection.
+        </p>
       </header>
 
 
       <main>
-        Main Content
-        <ol>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ol>
+        <h2>Guides</h2>
+
+        <div class="guide-card">
+          <div class="text">
+            <h3 class="title">How to Install Python</h3>
+            <p class="description">
+              This guide walks you through how to install python from start to finish
+            </p>
+            <p class="last-updated">Last updated a month ago</p>
+          </div>
+          <div class="separator"></div>
+          <figure>
+            <img src="img/python.webp" alt="Python logo">
+            <figcaption>Python</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-card">
+          <div class="text">
+            <h3 class="title">Introduction to Python functions</h3>
+            <p class="description">
+              This guide will teach you how python functions work,
+              from their syntax, to their purpose, and some of the conceptual thinking
+              behind it.
+            </p>
+            <p class="last-updated">Last updated 3 weeks ago</p>
+          </div>
+          <div class="separator"></div>
+          <figure>
+            <img src="img/python_example.png" alt="Python code snippet">
+            <figcaption>Python code example</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-card">
+          <div class="text">
+            <h3 class="title">Why Python</h3>
+            <p class="description">
+              Are you sure if Python is the language for you?
+              This guide will dive right into the pros and cons
+              of using Python, and whether it is perfect for your
+              use case or not.
+            </p>
+            <p class="last-updated">Last updated 10 hours ago</p>
+          </div>
+          <div class="separator"></div>
+          <figure>
+            <img src="img/question_mark.png" alt="3D question mark">
+            <figcaption>Question mark</figcaption>
+          </figure>
+        </div>
       </main>
+
       <aside>
-        <div id="add-comment">
-          <fieldset>
-            <legend>Leave a comment!</legend>
-            <label for="comment-text"></label><textarea id="comment-text" placeholder="What do you think?" rows="8"></textarea>
-            <br>
-            <label for="comment-name"></label><input id="comment-name" type="text" placeholder="Your name">
-            <input id="comment-image" type="file" accept="image/png" alt="Custom icon">
-            <button id="submit" type="submit">Submit</button>
-          </fieldset>
+        <div id="aside-stuff">
+          <h2>Why visit Learn Python?</h2>
+
+          <p id="why-visit-learn-python">
+            &quot;Learn Python Incorporated believe in teaching Python to people in a way that is simple and understandable.
+            We want you to have a job so by learning Python you can get a job.
+            Learning doesn't have to be hard. We'll help you learn python with our various guides.
+            Have you ever thought of Python? I've thought of Python. It makes you think.
+            I really was short on ideas for what to make this website about.
+            To be honest, I don't love Python. It's just okay.&quot;
+          </p>
+
+          <p>— Oliver Astell</p>
+
+          <button id="why-visit-button">
+            <img src="img/python.webp" alt="Python logo">
+            I finally finished my website!
+          </button>
         </div>
       </aside>
+
       <footer>
-        Footer
+        <ul id="footer-links">
+          <li><a href="">Support us</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+
+        <div id="contact-us">
+          <fieldset>
+            <legend>Send us an email!</legend>
+
+            <label for="email-content">Content</label>
+            <textarea id="email-content" placeholder="What do you think?"></textarea>
+
+            <label for="email-sender">Your email</label>
+            <input id="email-sender" type="email" placeholder="Your email">
+
+            <button id="email-submit" type="submit">
+              Send!
+            </button>
+          </fieldset>
+        </div>
       </footer>
     </div>
   </div>
